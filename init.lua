@@ -45,8 +45,10 @@ set_opts({
     shiftwidth = 4,
     expandtab = true,
     showmatch = true,
+    ignorecase = true,
     smartcase = true,
     termguicolors = true,
+    scrolloff = 5,
     completeopt = { 'menu', 'menuone' }
 })
 
