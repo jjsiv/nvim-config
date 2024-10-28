@@ -48,15 +48,15 @@ set_opts({
     ignorecase = true,
     smartcase = true,
     termguicolors = true,
-    scrolloff = 5,
+    scrolloff = 10,
     completeopt = { 'menu', 'menuone' }
 })
 
 set_colorscheme("default")
 
 -- a list of remaps, each entry must be a map<mode=string, from=string, to=string>
+local builtin = require('telescope.builtin')
 set_keymappings({
     {mode = "n", from = "<C-d>", to = "<C-d>zz"},
     {mode = "n", from = "<C-u>", to = "<C-u>zz"},
 })
-
