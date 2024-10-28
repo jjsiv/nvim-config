@@ -55,8 +55,9 @@ set_opts({
 set_colorscheme("default")
 
 -- a list of remaps, each entry must be a map<mode=string, from=string, to=string>
-local builtin = require('telescope.builtin')
 set_keymappings({
     {mode = "n", from = "<C-d>", to = "<C-d>zz"},
     {mode = "n", from = "<C-u>", to = "<C-u>zz"},
 })
+
+require('config.lsp')
