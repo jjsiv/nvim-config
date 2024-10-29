@@ -52,7 +52,7 @@ set_opts({
     completeopt = { 'menu', 'menuone' }
 })
 
-set_colorscheme("default")
+set_colorscheme("kanagawa-wave")
 
 -- a list of remaps, each entry must be a map<mode=string, from=string, to=string>
 set_keymappings({
@@ -60,4 +60,5 @@ set_keymappings({
     {mode = "n", from = "<C-u>", to = "<C-u>zz"},
 })
 
+-- contains setups for various LSPs. Each LSP is only activated when installed
 require('config.lsp')
