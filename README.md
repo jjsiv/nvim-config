@@ -39,4 +39,5 @@ LSPs are installed via Mason. LSPs to install automatically on launch can be spe
 - some markdown plugin
 - indents (for terraform at least)
 - some colorschemes
-- consider tab/window/buffer management (some shortcuts? do we need a tab plugin like bufferline or barbar?)
+- shortcuts for some commands (dvo=DiffviewOpen, dvc=DiffviewClose)
+- keymaps for buffers (maybe not needed?)

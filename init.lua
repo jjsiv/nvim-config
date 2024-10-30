@@ -26,7 +26,7 @@ local function set_colorscheme(colorscheme)
     vim.api.nvim_set_hl(0, "LineNr", { fg = "#daa520" })
 end
 
-set_colorscheme("kanagawa-wave")
+set_colorscheme("kanagawa-dragon")
 
 -- :h option-list for all options
 -- :h <option> for doc about option
@@ -43,7 +43,7 @@ set_opts({
     smartcase = true,
     termguicolors = true,
     scrolloff = 10,
-    completeopt = { 'menu', 'menuone', 'noselect'}
+    completeopt = { 'menu', 'menuone', 'noselect' }
 })
 
 -- keymappings
@@ -65,4 +65,3 @@ end, { expr = true })
 
 -- contains setups for various LSPs. Each LSP is only activated when installed
 require('config.lsp')
-
