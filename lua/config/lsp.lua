@@ -1,9 +1,9 @@
--- TODO: This file (or convert to dir?) could provide an interface for setting up and enabling/disabling LSPs
 local lspconfig = require('lspconfig')
+local coq = require('coq')
 
 -- Lua LSP setup
 if vim.fn.executable('lua-language-server') == 1 then
-    lspconfig.lua_ls.setup({
+    lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
         cmd = { 'lua-language-server' },
         on_init = function(client)
             if client.workspace_folders then
@@ -36,6 +36,5 @@ if vim.fn.executable('lua-language-server') == 1 then
         settings = {
             Lua = {}
         }
-    })
+    }))
 end
-

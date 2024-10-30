@@ -27,7 +27,7 @@
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [nvim-treesitter-endwise](https://github.com/RRethy/nvim-treesitter-endwise)
+- [coq_nvim](https://github.com/ms-jpq/coq_nvim)
 
 ## LSP
 LSPs are installed via Mason. LSPs to install automatically on launch can be specified in lua/plugins/mason-lspconfig.lua in ensure_installed. **Some LSPs require additional tools to be installed (e.g. npm or pip)**
@@ -39,3 +39,4 @@ LSPs are installed via Mason. LSPs to install automatically on launch can be spe
 - some markdown plugin
 - indents (for terraform at least)
 - some colorschemes
+- consider tab/window/buffer management (some shortcuts? do we need a tab plugin like bufferline or barbar?)

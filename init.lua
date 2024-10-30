@@ -26,13 +26,7 @@ local function set_colorscheme(colorscheme)
     vim.api.nvim_set_hl(0, "LineNr", { fg = "#daa520" })
 end
 
-
----@param remaps table<table<string, string>>
-local function set_keymappings(remaps)
-    for k, remap in pairs(remaps) do
-        vim.keymap.set(remap["mode"], remap["from"], remap["to"])
-    end
-end
+set_colorscheme("kanagawa-wave")
 
 -- :h option-list for all options
 -- :h <option> for doc about option
@@ -49,16 +43,26 @@ set_opts({
     smartcase = true,
     termguicolors = true,
     scrolloff = 10,
-    completeopt = { 'menu', 'menuone' }
+    completeopt = { 'menu', 'menuone', 'noselect'}
 })
 
-set_colorscheme("kanagawa-wave")
-
--- a list of remaps, each entry must be a map<mode=string, from=string, to=string>
-set_keymappings({
-    {mode = "n", from = "<C-d>", to = "<C-d>zz"},
-    {mode = "n", from = "<C-u>", to = "<C-u>zz"},
-})
+-- keymappings
+-- center screen after hitting ctrl+d/u
+vim.keymap.set("n", "<C-d>", "C-d>zz")
+vim.keymap.set("n", "<C-u>", "C-u>zz")
+-- remap tab to ctrl+n in popupmenu
+vim.keymap.set('i', '<Tab>', function()
+    return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+end)
+-- remap shift+tab to ctrl+p in popupmenu
+vim.keymap.set('i', '<S-Tab>', function()
+    return vim.fn.pumvisible() == 1 and "<C-p>" or "<BS>"
+end)
+-- do ctrl+y when tab is pressed in a popumenu
+vim.keymap.set('i', '<Tab>', function()
+    if vim.fn.pumvisible() == 1 then return "<C-y>" else return "<Tab>" end
+end, { expr = true })
 
 -- contains setups for various LSPs. Each LSP is only activated when installed
 require('config.lsp')
+
