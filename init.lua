@@ -47,9 +47,6 @@ set_opts({
 })
 
 -- keymappings
--- center screen after hitting ctrl+d/u
-vim.keymap.set("n", "<C-d>", "C-d>zz")
-vim.keymap.set("n", "<C-u>", "C-u>zz")
 -- remap tab to ctrl+n in popupmenu
 vim.keymap.set('i', '<Tab>', function()
     return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
