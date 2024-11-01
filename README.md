@@ -14,15 +14,16 @@
 - npm (optional, required for some installations via Mason)
 
 1. [Download and install Neovim 0.10.2](https://github.com/neovim/neovim/releases/tag/v0.10.2)
-2. Untar and move directory to /opt. Update PATH accordingly
+2. Untar and move directory to /opt. Update PATH accordingly  
 `export PATH=$PATH:/opt/nvim-linux64/bin`
-3. Create local config directory ~/.config/nvim
+3. Create local config directory ~/.config/nvim  
 `mkdir -p ~/.config/nvim`
-4. Clone this repo into the config directory
+4. Clone this repo into the config directory  
 `git clone https://github.com/jjsiv/nvim-config.git ~/.config/nvim`
 5. Launch Neovim. First launch will bootstrap **lazy.nvim** package manager and subsequently all other plugins. This will require internet access.
 6. Mason will try to automatically install default LSPs defined in *mason-lspconfig.lua*. Some might fail in case npm/pip/go are missing.
-7. Once all plugins have been installed, you will be asked to update dependencies for **coq_nvim** by running :COQdeps.
+7. Once all plugins have been installed, you will be asked to update dependencies for **coq_nvim** by running  
+`:COQdeps.`
 8. Once everything has been installed, restart Neovim and it should be ready to use.
 
 ## Plugins included
@@ -39,6 +40,7 @@
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [coq_nvim](https://github.com/ms-jpq/coq_nvim)
+- [coq.artifacts](https://github.com/ms-jpq/coq.artifacts)
 
 ## LSP
 LSPs are installed via Mason. LSPs to install automatically on launch can be specified in lua/plugins/mason-lspconfig.lua in ensure_installed. **Some LSPs require additional tools to be installed (e.g. npm or pip)**
@@ -46,9 +48,8 @@ LSPs are installed via Mason. LSPs to install automatically on launch can be spe
 **lua/config/lsp.lua** defines config for LSPs. The config will be only activated if the LSP is installed and executable.
 
 ## TODO
-- ftdetects for ansible (if needed)
+- ftdetects for ansible & helm
 - some markdown plugin
 - indents (for terraform at least)
 - some colorschemes
 - shortcuts for some commands (dvo=DiffviewOpen, dvc=DiffviewClose)
-- keymaps for buffers (maybe not needed?)
