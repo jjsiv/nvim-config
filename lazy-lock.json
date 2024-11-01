@@ -1,4 +1,5 @@
 {
+  "coq.artifacts": { "branch": "artifacts", "commit": "a1ffcee295905171d87b40ee456001d45b10329b" },
   "coq_nvim": { "branch": "coq", "commit": "db12581bea4e83b8d8142c15daa9632d796636cf" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "gitsigns.nvim": { "branch": "main", "commit": "7c27a30450130cd59c4994a6755e3c5d74d83e76" },

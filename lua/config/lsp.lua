@@ -80,7 +80,7 @@ end
 if is_executable('bash-language-server') then
     lspconfig.bashls.setup(coq.lsp_ensure_capabilities({
         cmd = { 'bash-language-server', 'start' },
-        filetypes = { 'sh ' },
+        filetypes = { 'sh' },
     }))
 end
 
