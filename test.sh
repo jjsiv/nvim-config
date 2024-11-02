@@ -17,5 +17,3 @@ function log() {
 }
 
 log "info" "test"
-
-
