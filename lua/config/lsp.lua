@@ -115,3 +115,11 @@ if is_executable('marksman') then
         filetypes = { 'markdown', 'markdown.mdx' },
     }))
 end
+
+-- Terraform LSP setup
+if is_executable('terraform-ls') then
+    lspconfig.terraformls.setup(coq.lsp_ensure_capabilities({
+        cmd = { 'terraform-ls', 'serve' },
+        filetypes = { 'terraform', 'terraform-vars', 'tf', 'tfvars' },
+    }))
+end
