@@ -42,6 +42,7 @@
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [coq_nvim](https://github.com/ms-jpq/coq_nvim)
 - [coq.artifacts](https://github.com/ms-jpq/coq.artifacts)
+- [glow.nvim](https://github.com/ellisonleao/glow.nvim)
 
 ## LSP
 LSPs are installed via Mason. LSPs to install automatically on launch can be specified in lua/plugins/mason-lspconfig.lua in ensure_installed. **Some LSPs require additional tools to be installed (e.g. npm or pip)**
@@ -49,9 +50,5 @@ LSPs are installed via Mason. LSPs to install automatically on launch can be spe
 **lua/config/lsp.lua** defines config for LSPs. The config will be only activated if the LSP is installed and executable.
 
 ## TODO
-- ftdetects for ansible & helm
-- some markdown plugin
-- indents (for terraform at least)
 - some colorschemes
-- shortcuts for some commands (dvo=DiffviewOpen, dvc=DiffviewClose)
 - plugin for yaml merge across buffers?
