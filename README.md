@@ -12,6 +12,7 @@
 - ripgrep (for nvim-telescope)
 - fd (optional, for nvim-telescope)
 - npm (optional, required for some installations via Mason)
+- go (optional, required for some installations via Mason)
 
 1. [Download and install Neovim 0.10.2](https://github.com/neovim/neovim/releases/tag/v0.10.2)
 2. Untar and move directory to /opt. Update PATH accordingly  
@@ -53,3 +54,4 @@ LSPs are installed via Mason. LSPs to install automatically on launch can be spe
 - indents (for terraform at least)
 - some colorschemes
 - shortcuts for some commands (dvo=DiffviewOpen, dvc=DiffviewClose)
+- plugin for yaml merge across buffers?
