@@ -39,7 +39,6 @@
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
-- [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)

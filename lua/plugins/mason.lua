@@ -26,21 +26,27 @@ return {
         )
 
         ---@param packages table<string>
-        local function install_packages(packages)
+        local function setup_packages(packages)
             for _, package in ipairs(packages) do
                 local installed = registry.is_installed(package)
-                if not installed then
-                    if registry.has_package(package) then
-                        registry.get_package(package):install()
-                    end
+                if not installed and registry.has_package(package) then
+                    registry.get_package(package):install()
                 end
             end
         end
 
-        install_packages({
+        -- Mason package names have to be used here
+        -- i.e. 'lua-language-server' instead of lua_ls
+        setup_packages({
             'prettier',
-            'ansible-lint'
+            'ansible-language-server',
+            'ansible-lint',
+            'terraform-ls',
+            'bash-language-server',
+            'lua-language-server',
+            'gopls',
+            'helm-ls',
+            'pyright',
         })
-
     end,
 }
