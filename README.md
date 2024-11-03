@@ -57,3 +57,5 @@ LSPs are installed via Mason. LSPs to install automatically on launch can be spe
 
 - some colorschemes
 - plugin for yaml merge across buffers?
+- plugin for tektoncd - snippets, autocreate pioelineruns, taskruns, run a pipeline/task and show results, autocleanup
+- markdown snippets (links, headings, tables)
