@@ -37,6 +37,7 @@ return {
 
         -- Mason package names have to be used here
         -- i.e. 'lua-language-server' instead of lua_ls
+        registry.refresh()
         setup_packages({
             'prettier',
             'ansible-language-server',
