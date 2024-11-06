@@ -60,7 +60,9 @@ end)
 vim.keymap.set('i', '<Tab>', function()
   if vim.fn.pumvisible() == 1 then return "<C-y>" else return "<Tab>" end
 end, { expr = true })
+-- next buffer ctrl+n
+vim.keymap.set('n', "<C-n>", "<cmd>bnext<CR>", {})
+vim.keymap.set('n', "<C-p>", "<cmd>bprev<CR>", {})
 
 -- contains setups for various LSPs. Each LSP is only activated when installed
 require('config.lsp')
-
