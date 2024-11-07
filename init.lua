@@ -66,4 +66,3 @@ vim.keymap.set('n', "<C-p>", "<cmd>bprev<CR>", {})
 
 -- contains setups for various LSPs. Each LSP is only activated when installed
 require('config.lsp')
-require('merge')
