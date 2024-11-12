@@ -44,6 +44,7 @@ set_opts({
   termguicolors = true,
   scrolloff = 10,
   splitright = true,
+  cursorline = true,
   completeopt = { 'menu', 'menuone' }
 })
 
