@@ -23,7 +23,7 @@ local function set_colorscheme(colorscheme)
   end
   -- set gold color to line numbers, should be visible on most schemes
   -- set at the end to overwrite any colorscheme config
-  vim.api.nvim_set_hl(0, "LineNr", { fg = "#daa520" })
+  vim.api.nvim_set_hl(0, "LineNr", { bold = true, bg = "#2A2A37" })
 end
 
 set_colorscheme("kanagawa")
