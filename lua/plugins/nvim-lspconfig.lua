@@ -10,7 +10,7 @@ return {
       auto_start = "shut-up",
       keymap = {
         recommended = false,
-        pre_select = true
+        pre_select = false
       },
       limits = {
         completion_auto_timeout = 0,
