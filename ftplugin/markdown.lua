@@ -1,5 +1,5 @@
 if vim.fn.executable('prettier') == 1 then
-  vim.api.nvim_create_autocmd({'BufWrite'}, {
+  vim.api.nvim_create_autocmd({'BufWritePre'}, {
     pattern = { '*.md' },
     callback = function()
       local current_buffer = 0
