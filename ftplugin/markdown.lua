@@ -1,6 +1,8 @@
 if vim.fn.executable('prettier') == 1 then
+  local grp = vim.api.nvim_create_augroup('md_prettier', { clear = true })
   vim.api.nvim_create_autocmd({'BufWritePre'}, {
     pattern = { '*.md' },
+    group = grp,
     callback = function()
       local current_buffer = 0
       local filepath = vim.api.nvim_buf_get_name(current_buffer)

@@ -4,8 +4,9 @@
 
 ## Requirements
 
-- internet connection (direct or through proxy) C compiler (gcc/clang)
-- Lua (preferably 5.1)
+- internet connection (direct or through proxy)
+- C compiler (gcc/clang)
+- Lua 5.1
 - git
 - python
 - pip
