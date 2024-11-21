@@ -1,5 +1,12 @@
 require("config.lazy")
 
+-- colorscheme
+vim.api.nvim_cmd({
+  cmd = "colorscheme",
+  args = { "kanagawa-dragon" }
+},
+  {})
+
 ---@param opts table<string, any>
 local function set_opts(opts)
   for opt, value in pairs(opts) do
@@ -12,28 +19,12 @@ local function set_opts(opts)
 end
 
 
----@param colorscheme? string
-local function set_colorscheme(colorscheme)
-  if (type(colorscheme) ~= "nil") then
-    vim.api.nvim_cmd({
-      cmd = "colorscheme",
-      args = { colorscheme }
-    },
-      {})
-  end
-  -- set gold color to line numbers, should be visible on most schemes
-  -- set at the end to overwrite any colorscheme config
-  --vim.api.nvim_set_hl(0, "LineNr", { bold = true, bg = "#2A2A37" })
-end
-
-set_colorscheme("kanagawa-dragon")
 
 -- :h option-list for all options
 -- :h <option> for doc about option
 set_opts({
   number = true,
   relativenumber = true,
-  -- indentation. convert tab to spaces, set actual tabs to be different width (to spot tabs better)
   tabstop = 8,
   softtabstop = 8,
   shiftwidth = 4,
