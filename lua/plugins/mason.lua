@@ -48,6 +48,7 @@ return {
       'gopls',
       'helm-ls',
       'pyright',
+      'clangd',
     })
   end,
 }

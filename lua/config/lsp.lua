@@ -123,3 +123,11 @@ if is_executable('terraform-ls') then
     filetypes = { 'terraform', 'terraform-vars', 'tf', 'tfvars' },
   }))
 end
+
+-- C/C++ LSP setup
+if is_executable('clangd') then
+  lspconfig.clangd.setup(coq.lsp_ensure_capabilities({
+    cmd = { 'clangd' },
+    filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  }))
+end
