@@ -46,6 +46,7 @@
 - [coq_nvim](https://github.com/ms-jpq/coq_nvim)
 - [coq.artifacts](https://github.com/ms-jpq/coq.artifacts)
 - [glow.nvim](https://github.com/ellisonleao/glow.nvim)
+- [nvim-surround](https://github.com/kylechui/nvim-surround)
 
 ## LSP
 
