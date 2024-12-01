@@ -1,3 +1,5 @@
+local tsutils = require('utils')
+
 -- next buffer ctrl+n
 vim.keymap.set('n', "<C-n>", "<cmd>bnext<CR>", {})
 vim.keymap.set('n', "<C-p>", "<cmd>bprev<CR>", {})
@@ -23,3 +25,16 @@ vim.keymap.set('n', '<Leader>d', function() vim.diagnostic.open_float() end, {})
 -- diffview shortnames
 vim.keymap.set('ca', 'Dvo', 'DiffviewOpen')
 vim.keymap.set('ca', 'Dvc', 'DiffviewClose')
+
+-- go to function start
+vim.keymap.set('n', 'gp', function()
+  local row, col, byte = tsutils.find_node_ancestor(vim.treesitter.get_node(), 'function_declaration'):start()
+  vim.fn.cursor(row+1, 0)
+end, {})
+
+-- go to function end
+vim.keymap.set('n', 'ge', function()
+  local srow, scol, srow, scol = tsutils.find_node_ancestor(vim.treesitter.get_node(), 'function_declaration'):range()
+  vim.fn.cursor(srow+1, 0)
+end, {})
+
