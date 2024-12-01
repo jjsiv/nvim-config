@@ -35,9 +35,9 @@ vim.keymap.set('n', 'gp', function()
   if not node then
     return nil
     end
-  local row = node:start()
-  vim.fn.cursor(row+1, 0)
-end, {})
+  local row, col = node:field('name')[1]:start()
+  vim.api.nvim_win_set_cursor(0, { row+1, col })
+end, { desc = "Jump to function name"})
 
 -- go to function end
 vim.keymap.set('n', 'ge', function()
@@ -48,6 +48,6 @@ vim.keymap.set('n', 'ge', function()
   if not node then
     return nil
   end
-  local row = node:end_()
-  vim.fn.cursor(row+1, 0)
-end, {})
+  local row, col = node:end_()
+  vim.api.nvim_win_set_cursor(0, { row+1, col })
+end, { desc = "Jump to function end"})
