@@ -17,6 +17,7 @@ return {
     vim.keymap.set('n', '<leader>lo', builtin.lsp_outgoing_calls, { desc = 'Telescope LSP outgoing calls' })
     vim.keymap.set('n', '<leader>ld', builtin.lsp_definitions, { desc = 'Telescope LSP definitions' })
     vim.keymap.set('n', '<leader>lt', builtin.lsp_type_definitions, { desc = 'Telescope LSP type definitions' })
+    vim.keymap.set('n', '<leader>lw', builtin.lsp_document_symbols, { desc = 'Telescope LSP document symbols' })
     vim.keymap.set('n', '<leader>le', builtin.diagnostics, { desc = 'Telescope LSP diagnostics' })
     -- Git pickers
     vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'Telescope Git commits' })
