@@ -28,13 +28,23 @@ vim.keymap.set('ca', 'Dvc', 'DiffviewClose')
 
 -- go to function start
 vim.keymap.set('n', 'gp', function()
-  local row, col, byte = tsutils.find_node_ancestor(vim.treesitter.get_node(), 'function_declaration'):start()
-  vim.fn.cursor(row+1, 0)
+  local row, col, byte = tsutils.find_node_ancestor(
+    vim.treesitter.get_node(),
+    { 'function_declaration', 'method_declaration' }
+  ):start()
+  if row ~= nil then
+    vim.fn.cursor(row+1, 0)
+  end
 end, {})
 
 -- go to function end
 vim.keymap.set('n', 'ge', function()
-  local srow, scol, srow, scol = tsutils.find_node_ancestor(vim.treesitter.get_node(), 'function_declaration'):range()
-  vim.fn.cursor(srow+1, 0)
+  local srow, scol, erow, ecol = tsutils.find_node_ancestor(
+    vim.treesitter.get_node(),
+    { 'function_declaration', 'method_declaration' }
+  ):range()
+  if erow ~= nil then
+    vim.fn.cursor(erow+1, 0)
+  end
 end, {})
 
