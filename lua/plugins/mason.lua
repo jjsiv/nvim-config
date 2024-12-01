@@ -49,6 +49,7 @@ return {
       'helm-ls',
       'pyright',
       'clangd',
+      'yaml-language-server',
     })
   end,
 }

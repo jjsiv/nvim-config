@@ -131,3 +131,11 @@ if is_executable('clangd') then
     filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
   }))
 end
+--
+-- yaml LSP setup
+if is_executable('yaml-language-server') then
+  lspconfig.yamlls.setup(coq.lsp_ensure_capabilities({
+    cmd = { 'yaml-language-server', '--stdio' },
+    filetypes = { 'yaml' },
+  }))
+end
