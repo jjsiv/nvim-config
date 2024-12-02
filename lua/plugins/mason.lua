@@ -50,6 +50,7 @@ return {
       'pyright',
       'clangd',
       'yaml-language-server',
+      'shellcheck',
     })
   end,
 }

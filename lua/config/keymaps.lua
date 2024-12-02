@@ -30,7 +30,7 @@ vim.keymap.set('ca', 'Dvc', 'DiffviewClose')
 vim.keymap.set('n', 'gp', function()
   local node = tsutils.find_node_ancestor(
     vim.treesitter.get_node(),
-    { 'function_declaration', 'method_declaration' }
+    { 'function_declaration', 'method_declaration', 'function_definition' }
   )
   if not node then
     return nil
@@ -43,7 +43,7 @@ end, { desc = "Jump to function name"})
 vim.keymap.set('n', 'ge', function()
   local node = tsutils.find_node_ancestor(
     vim.treesitter.get_node(),
-    { 'function_declaration', 'method_declaration' }
+    { 'function_declaration', 'method_declaration', 'function_definition'}
   )
   if not node then
     return nil
