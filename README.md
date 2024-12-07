@@ -53,7 +53,3 @@
 LSPs are installed via Mason. LSPs to install automatically on launch can be specified in lua/plugins/mason-lspconfig.lua in ensure_installed. **Some LSPs require additional tools to be installed (e.g. npm or pip)**
 
 **lua/config/lsp.lua** defines config for LSPs. The config will be only activated if the LSP is installed and executable.
-
-## TODO
-
-- Plugin for jumping to function name, params, etc.
