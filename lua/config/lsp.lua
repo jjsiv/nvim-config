@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- This file contains config for various LSPs
 -- Each setup call should be guarded with is_executable to avoid errors setting up LSPs that aren't installed
@@ -12,6 +13,7 @@ end
 -- Lua LSP setup
 if is_executable('lua-language-server') then
   lspconfig.lua_ls.setup({
+    capabilities = capabilities,
     cmd = { 'lua-language-server' },
     on_init = function(client)
       if client.workspace_folders then
