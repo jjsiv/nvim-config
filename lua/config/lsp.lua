@@ -1,5 +1,4 @@
 local lspconfig = require('lspconfig')
-local coq = require('coq')
 
 -- This file contains config for various LSPs
 -- Each setup call should be guarded with is_executable to avoid errors setting up LSPs that aren't installed
@@ -12,7 +11,7 @@ end
 
 -- Lua LSP setup
 if is_executable('lua-language-server') then
-  lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
+  lspconfig.lua_ls.setup({
     cmd = { 'lua-language-server' },
     on_init = function(client)
       if client.workspace_folders then
@@ -45,12 +44,12 @@ if is_executable('lua-language-server') then
     settings = {
       Lua = {}
     }
-  }))
+  })
 end
 
 -- Ansible LSP setup
 if is_executable('ansible-language-server') then
-  lspconfig.ansiblels.setup(coq.lsp_ensure_capabilities({
+  lspconfig.ansiblels.setup({
     cmd = { 'ansible-language-server', '--stdio' },
     filetypes = { 'yaml.ansible' },
     settings = {
@@ -73,68 +72,68 @@ if is_executable('ansible-language-server') then
         }
       }
     }
-  }))
+  })
 end
 
 -- Bash LSP setup
 if is_executable('bash-language-server') then
-  lspconfig.bashls.setup(coq.lsp_ensure_capabilities({
+  lspconfig.bashls.setup({
     cmd = { 'bash-language-server', 'start' },
     filetypes = { 'sh' },
-  }))
+  })
 end
 
 -- Python LSP setup
 if is_executable('pyright-langserver') then
-  lspconfig.pyright.setup(coq.lsp_ensure_capabilities({
+  lspconfig.pyright.setup({
     cmd = { 'pyright-langserver', '--stdio' },
     filetypes = { 'python' },
-  }))
+  })
 end
 
 -- Helm LSP setup
 if is_executable('helm_ls') then
-  lspconfig.helm_ls.setup(coq.lsp_ensure_capabilities({
+  lspconfig.helm_ls.setup({
     cmd = { 'helm_ls', 'serve' },
     filetypes = { 'helm' },
-  }))
+  })
 end
 
 -- Go LSP setup
 if is_executable('gopls') then
-  lspconfig.gopls.setup(coq.lsp_ensure_capabilities({
+  lspconfig.gopls.setup({
     cmd = { 'gopls' },
     filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
-  }))
+  })
 end
 
 -- Markdown LSP setup
 if is_executable('marksman') then
-  lspconfig.marksman.setup(coq.lsp_ensure_capabilities({
+  lspconfig.marksman.setup({
     cmd = { 'marksman', 'server' },
     filetypes = { 'markdown', 'markdown.mdx' },
-  }))
+  })
 end
 
 -- Terraform LSP setup
 if is_executable('terraform-ls') then
-  lspconfig.terraformls.setup(coq.lsp_ensure_capabilities({
+  lspconfig.terraformls.setup({
     cmd = { 'terraform-ls', 'serve' },
     filetypes = { 'terraform', 'terraform-vars', 'tf', 'tfvars' },
-  }))
+  })
 end
 
 -- C/C++ LSP setup
 if is_executable('clangd') then
-  lspconfig.clangd.setup(coq.lsp_ensure_capabilities({
+  lspconfig.clangd.setup({
     cmd = { 'clangd' },
     filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-  }))
+  })
 end
 --
 -- yaml LSP setup
 if is_executable('yaml-language-server') then
-  lspconfig.yamlls.setup(coq.lsp_ensure_capabilities({
+  lspconfig.yamlls.setup({
     cmd = { 'yaml-language-server', '--stdio' },
     filetypes = { 'yaml' },
     settings = {
@@ -146,5 +145,5 @@ if is_executable('yaml-language-server') then
         completion = true,
       },
     },
-  }))
+  })
 end
