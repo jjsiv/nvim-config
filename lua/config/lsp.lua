@@ -52,6 +52,7 @@ end
 -- Ansible LSP setup
 if is_executable('ansible-language-server') then
   lspconfig.ansiblels.setup({
+    capabilities = capabilities,
     cmd = { 'ansible-language-server', '--stdio' },
     filetypes = { 'yaml.ansible' },
     settings = {
@@ -80,6 +81,7 @@ end
 -- Bash LSP setup
 if is_executable('bash-language-server') then
   lspconfig.bashls.setup({
+    capabilities = capabilities,
     cmd = { 'bash-language-server', 'start' },
     filetypes = { 'sh' },
   })
@@ -88,6 +90,7 @@ end
 -- Python LSP setup
 if is_executable('pyright-langserver') then
   lspconfig.pyright.setup({
+    capabilities = capabilities,
     cmd = { 'pyright-langserver', '--stdio' },
     filetypes = { 'python' },
   })
@@ -96,6 +99,7 @@ end
 -- Helm LSP setup
 if is_executable('helm_ls') then
   lspconfig.helm_ls.setup({
+    capabilities = capabilities,
     cmd = { 'helm_ls', 'serve' },
     filetypes = { 'helm' },
   })
@@ -104,6 +108,7 @@ end
 -- Go LSP setup
 if is_executable('gopls') then
   lspconfig.gopls.setup({
+    capabilities = capabilities,
     cmd = { 'gopls' },
     filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
   })
@@ -112,6 +117,7 @@ end
 -- Markdown LSP setup
 if is_executable('marksman') then
   lspconfig.marksman.setup({
+    capabilities = capabilities,
     cmd = { 'marksman', 'server' },
     filetypes = { 'markdown', 'markdown.mdx' },
   })
@@ -120,6 +126,7 @@ end
 -- Terraform LSP setup
 if is_executable('terraform-ls') then
   lspconfig.terraformls.setup({
+    capabilities = capabilities,
     cmd = { 'terraform-ls', 'serve' },
     filetypes = { 'terraform', 'terraform-vars', 'tf', 'tfvars' },
   })
@@ -128,6 +135,7 @@ end
 -- C/C++ LSP setup
 if is_executable('clangd') then
   lspconfig.clangd.setup({
+    capabilities = capabilities,
     cmd = { 'clangd' },
     filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
   })
@@ -136,6 +144,7 @@ end
 -- yaml LSP setup
 if is_executable('yaml-language-server') then
   lspconfig.yamlls.setup({
+    capabilities = capabilities,
     cmd = { 'yaml-language-server', '--stdio' },
     filetypes = { 'yaml' },
     settings = {
