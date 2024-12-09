@@ -106,6 +106,13 @@ if is_executable('helm_ls') then
     capabilities = capabilities,
     cmd = { 'helm_ls', 'serve' },
     filetypes = { 'helm' },
+    settings = {
+      ['helm-ls'] = {
+        yamlls = {
+          enabled = false,
+        }
+      }
+    }
   })
 end
 
