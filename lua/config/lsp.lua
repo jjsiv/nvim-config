@@ -44,7 +44,11 @@ if is_executable('lua-language-server') then
       })
     end,
     settings = {
-      Lua = {}
+      Lua = {
+        completion = {
+          callSnippet = 'Replace',
+        }
+      }
     }
   })
 end
