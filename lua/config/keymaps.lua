@@ -1,4 +1,5 @@
 local tsutils = require('utils')
+local luasnip = require('luasnip')
 
 -- next buffer ctrl+n
 vim.keymap.set('n', "<C-n>", "<cmd>bnext<CR>", {})
@@ -17,6 +18,9 @@ vim.keymap.set('n', "<C-p>", "<cmd>bprev<CR>", {})
 --vim.keymap.set('i', '<Tab>', function()
 --  if vim.fn.pumvisible() == 1 then return "<C-y>" else return "<Tab>" end
 --end, { expr = true })
+
+vim.keymap.set('i', '<C-h>', function() luasnip.jump(1) end, {})
+vim.keymap.set('i', '<C-g>', function() luasnip.jump(-1) end, {})
 
 -- other LSP related keybindings
 vim.keymap.set('n', '<Leader>rn', function() vim.lsp.buf.rename() end, {})
