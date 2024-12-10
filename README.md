@@ -30,7 +30,7 @@
    `:COQdeps.`
 8. Once everything has been installed, restart Neovim and it should be ready to use.
 
-## Plugins included
+## Plugins
 
 - [lazy.nvim](https://github.com/folke/lazy.nvim) (package manager)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -43,13 +43,18 @@
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [coq_nvim](https://github.com/ms-jpq/coq_nvim)
-- [coq.artifacts](https://github.com/ms-jpq/coq.artifacts)
 - [glow.nvim](https://github.com/ellisonleao/glow.nvim)
 - [nvim-surround](https://github.com/kylechui/nvim-surround)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+- [cmp-path](https://github.com/hrsh7th/cmp-path)
+- [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+- [LuaSnip](https://github.com/L3M0N4D3/LuaSnip)
+- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 
 ## LSP
 
-LSPs are installed via Mason. LSPs to install automatically on launch can be specified in lua/plugins/mason-lspconfig.lua in ensure_installed. **Some LSPs require additional tools to be installed (e.g. npm or pip)**
+LSPs are installed via Mason in `lua/plugins/mason.lua`.
 
 **lua/config/lsp.lua** defines config for LSPs. The config will be only activated if the LSP is installed and executable.

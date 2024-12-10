@@ -122,6 +122,11 @@ if is_executable('gopls') then
     capabilities = capabilities,
     cmd = { 'gopls' },
     filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+    settings = {
+      gopls = {
+        usePlaceholders = true,
+      }
+    }
   })
 end
 
