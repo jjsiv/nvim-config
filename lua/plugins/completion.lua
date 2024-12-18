@@ -11,14 +11,14 @@ return {
   },
   config = function()
     local cmp = require('cmp')
-    local luasnip = require('luasnip')
+    local ls = require('luasnip')
     cmp.setup({
       experimental = {
         ghost_text = true,
       },
       snippet = {
         expand = function(args)
-          luasnip.lsp_expand(args.body)
+          ls.lsp_expand(args.body)
         end,
       },
       sources = cmp.config.sources({
@@ -33,5 +33,7 @@ return {
         ["<C-p>"] = cmp.mapping.select_prev_item(),
       },
     })
+
+    require("luasnip.loaders.from_snipmate").lazy_load()
   end,
 }
