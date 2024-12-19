@@ -11,10 +11,8 @@
 - python
 - pip
 - python-venv
-- luarocks (optional, for lazy.nvim)
-- ripgrep (for nvim-telescope)
-- fd (optional, for nvim-telescope)
-- npm (optional, required for some installations via Mason)
+- ripgrep
+- npm
 - go (optional, required for some installations via Mason)
 
 1. [Download and install Neovim 0.10.2](https://github.com/neovim/neovim/releases/tag/v0.10.2)
@@ -26,9 +24,7 @@
    `git clone https://github.com/jjsiv/nvim-config.git ~/.config/nvim`
 5. Launch Neovim. First launch will bootstrap **lazy.nvim** package manager and subsequently all other plugins. This will require internet access.
 6. Mason will try to automatically install default LSPs defined in _mason-lspconfig.lua_. Some might fail in case npm/pip/go are missing.
-7. Once all plugins have been installed, you will be asked to update dependencies for **coq_nvim** by running  
-   `:COQdeps.`
-8. Once everything has been installed, restart Neovim and it should be ready to use.
+7. Once everything has been installed, restart Neovim and it should be ready to use.
 
 ## Plugins
 

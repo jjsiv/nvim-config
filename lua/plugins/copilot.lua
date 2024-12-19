@@ -9,6 +9,10 @@ return {
         jump_prev = "<M-p>",
         jump_next = "<M-n>",
       }
+    },
+    suggestion = {
+      enabled = true,
+      auto_trigger = true,
     }
   },
 }
