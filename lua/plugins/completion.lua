@@ -26,12 +26,28 @@ return {
         { name = 'luasnip' },
         { name = 'buffer' },
         { name = 'path' },
+        { name = "copilot", priority = 10 },
       }),
       mapping = {
         ['<Tab>'] = cmp.mapping.confirm({ select = false }),
         ["<C-n>"] = cmp.mapping.select_next_item(),
         ["<C-p>"] = cmp.mapping.select_prev_item(),
       },
+      sorting = {
+        priority_weight = 1,
+        comparators = {
+          require("copilot_cmp.comparators").prioritize,
+          --cmp.config.compare.offset,
+          --cmp.config.compare.exact,
+          --cmp.config.compare.score,
+          --cmp.config.compare.recently_used,
+          --cmp.config.compare.locality,
+          --cmp.config.compare.kind,
+          --cmp.config.compare.sort_text,
+          --cmp.config.compare.length,
+          --cmp.config.compare.order,
+        },
+      }
     })
 
     require("luasnip.loaders.from_snipmate").lazy_load()
