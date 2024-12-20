@@ -14,7 +14,7 @@ local opts = {
   scrolloff = 10,
   splitright = true,
   cursorline = true,
-  completeopt = { 'menu', 'menuone' , 'noselect' },
+  completeopt = { 'menu', 'menuone' , 'noselect', 'noinsert', 'popup' },
 }
 
 for opt, value in pairs(opts) do
