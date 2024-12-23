@@ -1,6 +1,6 @@
 # nvim-config
 
-**Currently tested for version 0.10.2**
+Requires Neovim 0.10.0+
 
 ## Requirements
 
