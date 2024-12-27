@@ -48,6 +48,9 @@ Requires Neovim 0.10.0+
 - [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
 - [LuaSnip](https://github.com/L3M0N4D3/LuaSnip)
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+- [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
+- [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
+- [CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
 
 ## LSP
 
