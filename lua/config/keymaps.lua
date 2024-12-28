@@ -55,3 +55,6 @@ vim.keymap.set('n', 'ge', function()
   local row, col = node:end_()
   vim.api.nvim_win_set_cursor(0, { row+1, col })
 end, { desc = "Jump to function end"})
+
+-- CopilotChat
+vim.keymap.set('n', '<Leader>cc', ':CopilotChatOpen<CR>')
