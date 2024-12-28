@@ -1,23 +1,17 @@
 local tsutils = require('utils')
 local luasnip = require('luasnip')
+local lazy = require('lazy.core.config')
+
+---Returns true if the plugin is loaded.
+---@param plugin string
+---@return boolean
+local function plugin_loaded(plugin)
+  return lazy.plugins[plugin] ~= nil
+end
 
 -- next buffer ctrl+n
 vim.keymap.set('n', "<C-n>", "<cmd>bnext<CR>", {})
 vim.keymap.set('n', "<C-p>", "<cmd>bprev<CR>", {})
-
--- mappings for coq_nvim
--- remap tab to ctrl+n in popupmenu
---vim.keymap.set('i', '<Tab>', function()
---  return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
---end)
----- remap shift+tab to ctrl+p in popupmenu
---vim.keymap.set('i', '<S-Tab>', function()
---  return vim.fn.pumvisible() == 1 and "<C-p>" or "<BS>"
---end)
----- do ctrl+y when tab is pressed in a popumenu
---vim.keymap.set('i', '<Tab>', function()
---  if vim.fn.pumvisible() == 1 then return "<C-y>" else return "<Tab>" end
---end, { expr = true })
 
 vim.keymap.set('i', '<C-h>', function() luasnip.jump(1) end, {})
 vim.keymap.set('i', '<C-g>', function() luasnip.jump(-1) end, {})
@@ -25,10 +19,6 @@ vim.keymap.set('i', '<C-g>', function() luasnip.jump(-1) end, {})
 -- other LSP related keybindings
 vim.keymap.set('n', '<Leader>rn', function() vim.lsp.buf.rename() end, {})
 vim.keymap.set('n', '<Leader>d', function() vim.diagnostic.open_float() end, {})
-
--- diffview shortnames
-vim.keymap.set('ca', 'Dvo', 'DiffviewOpen')
-vim.keymap.set('ca', 'Dvc', 'DiffviewClose')
 
 -- go to function start
 vim.keymap.set('n', 'gp', function()
@@ -57,4 +47,13 @@ vim.keymap.set('n', 'ge', function()
 end, { desc = "Jump to function end"})
 
 -- CopilotChat
-vim.keymap.set('n', '<Leader>cc', ':CopilotChatOpen<CR>')
+if plugin_loaded('CopilotChat.nvim') then
+  vim.keymap.set('n', '<Leader>cc', ':CopilotChatOpen<CR>')
+end
+
+-- diffview shortnames
+if plugin_loaded('diffview.nvim') then
+  vim.keymap.set('ca', 'Dvo', 'DiffviewOpen')
+  vim.keymap.set('ca', 'Dvc', 'DiffviewClose')
+end
+
