@@ -4,18 +4,16 @@ Requires Neovim 0.10.0+
 
 ## Requirements
 
-- internet connection (direct or through proxy)
 - C compiler (gcc/clang)
-- Lua 5.1
+- Lua
 - git
 - python
 - pip
-- python-venv
 - ripgrep
 - npm
 - go (optional, required for some installations via Mason)
 
-1. [Download and install Neovim 0.10.2](https://github.com/neovim/neovim/releases/tag/v0.10.2)
+1. [Download and install Neovim 0.10.3](https://github.com/neovim/neovim/releases/tag/v0.10.3)
 2. Untar and move directory to /opt. Update PATH accordingly  
    `export PATH=$PATH:/opt/nvim-linux64/bin`
 3. Create local config directory ~/.config/nvim  
@@ -51,6 +49,7 @@ Requires Neovim 0.10.0+
 - [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
 - [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
 - [CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
+- [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 
 ## LSP
 

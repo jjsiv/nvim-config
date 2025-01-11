@@ -51,6 +51,7 @@ return {
       'clangd',
       'yaml-language-server',
       'shellcheck',
+      'pylint',
     })
   end,
 }
