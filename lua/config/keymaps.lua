@@ -57,3 +57,5 @@ if plugin_loaded('diffview.nvim') then
   vim.keymap.set('ca', 'Dvc', 'DiffviewClose')
 end
 
+-- oil.nvim
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
