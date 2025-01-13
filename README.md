@@ -50,6 +50,7 @@ Requires Neovim 0.10.0+
 - [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
 - [CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
 - [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
+- [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
 
 ## LSP
 
