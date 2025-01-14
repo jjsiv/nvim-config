@@ -7,7 +7,7 @@ return {
       python = { 'pylint' },
     }
 
-    vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    vim.api.nvim_create_autocmd({ "InsertLeave" }, {
       callback = function()
         lint.try_lint()
       end,

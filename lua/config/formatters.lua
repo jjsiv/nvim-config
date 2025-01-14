@@ -1,7 +1,10 @@
-if vim.fn.executable('prettier') == 1 then
-  local grp = vim.api.nvim_create_augroup('yaml-prettier', { clear = true })
+local utils = require('utils')
+
+-- Prettier config
+if utils.is_executable('prettier') then
+  local grp = vim.api.nvim_create_augroup('prettier', { clear = true })
   vim.api.nvim_create_autocmd({'BufWritePre'}, {
-    pattern = { '*.yaml', '*.yml' },
+    pattern = { '*.md', '*.json', '*.yaml', '*.yml' },
     group = grp,
     callback = function()
       local current_buffer = 0

@@ -52,6 +52,7 @@ return {
       'yaml-language-server',
       'shellcheck',
       'pylint',
+      'autopep8',
     })
   end,
 }

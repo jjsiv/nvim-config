@@ -1,17 +1,13 @@
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local utils = require('utils')
 
 -- This file contains config for various LSPs
--- Each setup call should be guarded with is_executable to avoid errors setting up LSPs that aren't installed
+-- Each setup call should be guarded with utils.is_executable to avoid errors setting up LSPs that aren't installed
 -- setup doc here https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
---- @param program string
-local function is_executable(program)
-  return vim.fn.executable(program) == 1 and true or false
-end
-
 -- Lua LSP setup
-if is_executable('lua-language-server') then
+if utils.is_executable('lua-language-server') then
   lspconfig.lua_ls.setup({
     capabilities = capabilities,
     cmd = { 'lua-language-server' },
@@ -54,7 +50,7 @@ if is_executable('lua-language-server') then
 end
 
 -- Ansible LSP setup
-if is_executable('ansible-language-server') then
+if utils.is_executable('ansible-language-server') then
   lspconfig.ansiblels.setup({
     capabilities = capabilities,
     cmd = { 'ansible-language-server', '--stdio' },
@@ -73,7 +69,7 @@ if is_executable('ansible-language-server') then
         validation = {
           enabled = true,
           lint = {
-            enabled = is_executable('ansible-lint'),
+            enabled = utils.is_executable('ansible-lint'),
             path = "ansible-lint"
           }
         }
@@ -83,7 +79,7 @@ if is_executable('ansible-language-server') then
 end
 
 -- Bash LSP setup
-if is_executable('bash-language-server') then
+if utils.is_executable('bash-language-server') then
   lspconfig.bashls.setup({
     capabilities = capabilities,
     cmd = { 'bash-language-server', 'start' },
@@ -92,7 +88,7 @@ if is_executable('bash-language-server') then
 end
 
 -- Python LSP setup
-if is_executable('pyright-langserver') then
+if utils.is_executable('pyright-langserver') then
   lspconfig.pyright.setup({
     capabilities = capabilities,
     cmd = { 'pyright-langserver', '--stdio' },
@@ -101,7 +97,7 @@ if is_executable('pyright-langserver') then
 end
 
 -- Helm LSP setup
-if is_executable('helm_ls') then
+if utils.is_executable('helm_ls') then
   lspconfig.helm_ls.setup({
     capabilities = capabilities,
     cmd = { 'helm_ls', 'serve' },
@@ -117,7 +113,7 @@ if is_executable('helm_ls') then
 end
 
 -- Go LSP setup
-if is_executable('gopls') then
+if utils.is_executable('gopls') then
   lspconfig.gopls.setup({
     capabilities = capabilities,
     cmd = { 'gopls' },
@@ -131,7 +127,7 @@ if is_executable('gopls') then
 end
 
 -- Markdown LSP setup
-if is_executable('marksman') then
+if utils.is_executable('marksman') then
   lspconfig.marksman.setup({
     capabilities = capabilities,
     cmd = { 'marksman', 'server' },
@@ -140,7 +136,7 @@ if is_executable('marksman') then
 end
 
 -- Terraform LSP setup
-if is_executable('terraform-ls') then
+if utils.is_executable('terraform-ls') then
   lspconfig.terraformls.setup({
     capabilities = capabilities,
     cmd = { 'terraform-ls', 'serve' },
@@ -149,7 +145,7 @@ if is_executable('terraform-ls') then
 end
 
 -- C/C++ LSP setup
-if is_executable('clangd') then
+if utils.is_executable('clangd') then
   lspconfig.clangd.setup({
     capabilities = capabilities,
     cmd = { 'clangd' },
@@ -158,7 +154,7 @@ if is_executable('clangd') then
 end
 --
 -- yaml LSP setup
-if is_executable('yaml-language-server') then
+if utils.is_executable('yaml-language-server') then
   lspconfig.yamlls.setup({
     capabilities = capabilities,
     cmd = { 'yaml-language-server', '--stdio' },
