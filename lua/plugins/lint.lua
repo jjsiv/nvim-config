@@ -3,9 +3,7 @@ return {
   config = function()
     local lint = require('lint')
 
-    lint.linters_by_ft = {
-      python = { 'pylint' },
-    }
+    lint.linters_by_ft = {}
 
     vim.api.nvim_create_autocmd({ "InsertLeave" }, {
       callback = function()
