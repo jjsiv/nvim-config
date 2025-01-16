@@ -16,8 +16,6 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     "*/roles/*/tasks/*.yaml",
     "*/roles/*/handlers/*.yml",
     "*/roles/*/handlers/*.yaml",
-    "*/tasks/*.yml",
-    "*/tasks/*.yaml",
     "*/molecule/*.yml",
     "*/molecule/*.yaml",
     "/home/*/ansible/*.yaml",
