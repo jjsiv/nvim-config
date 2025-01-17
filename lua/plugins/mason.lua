@@ -52,6 +52,7 @@ return {
       'yaml-language-server',
       'shellcheck',
       'autopep8',
+      'shfmt',
     })
   end,
 }
