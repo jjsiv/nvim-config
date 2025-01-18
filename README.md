@@ -51,6 +51,8 @@ Requires Neovim 0.10.0+
 - [CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
 - [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
+- [jinh0/eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim)
+- [Wansmer/treesj](https://github.com/Wansmer/treesj)
 
 ## LSP
 
