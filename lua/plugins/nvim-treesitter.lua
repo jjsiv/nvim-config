@@ -7,7 +7,24 @@ return {
     local configs = require("nvim-treesitter.configs")
     vim.treesitter.language.register('yaml', 'tekton')
     configs.setup({
-      ensure_installed = { "bash", "c", "lua", "vim", "vimdoc", "javascript", "html", "python", "go", "yaml", "json", "markdown", "helm", "make", "dockerfile", "regex" },
+      ensure_installed = {
+        "bash",
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "javascript",
+        "html",
+        "python",
+        "go",
+        "yaml",
+        "json",
+        "markdown",
+        "helm",
+        "make",
+        "dockerfile",
+        "regex",
+      },
       sync_install = false,
       highlight = { enable = true },
       indent = { enable = true },
