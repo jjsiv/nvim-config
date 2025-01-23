@@ -26,6 +26,9 @@ return {
           toggle_or_open = '<CR>',
           vsplit = '<C-v>',
         }
+      },
+      implement = {
+        enable = true,
       }
     })
 
