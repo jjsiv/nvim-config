@@ -48,7 +48,7 @@ end, { desc = "Jump to function end"})
 
 -- CopilotChat
 if plugin_loaded('CopilotChat.nvim') then
-  vim.keymap.set('n', '<Leader>cc', ':CopilotChatOpen<CR>')
+  vim.keymap.set('ca', 'Chat', 'CopilotChatOpen')
 end
 
 -- diffview shortnames
