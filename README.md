@@ -53,6 +53,7 @@ Requires Neovim 0.10.0+
 - [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
 - [jinh0/eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim)
 - [Wansmer/treesj](https://github.com/Wansmer/treesj)
+- [nvimdev/lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)
 
 ## LSP
 
