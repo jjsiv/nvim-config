@@ -25,5 +25,11 @@ return {
     enabled = true,
     priority = 1000,
     lazy = false,
+  },
+  {
+    'projekt0n/github-nvim-theme',
+    name = "github",
+    priority = 1000,
+    lazy = false,
   }
 }
