@@ -24,7 +24,7 @@ vim.keymap.set('n', '<Leader>d', function() vim.diagnostic.open_float() end, {})
 vim.keymap.set('n', 'gp', function()
   local node = tsutils.find_node_ancestor(
     vim.treesitter.get_node(),
-    { 'function_declaration', 'method_declaration', 'function_definition' }
+    { 'function_declaration', 'method_declaration', 'function_definition', 'type_spec' }
   )
   if not node then
     return nil
@@ -37,7 +37,7 @@ end, { desc = "Jump to function name"})
 vim.keymap.set('n', 'ge', function()
   local node = tsutils.find_node_ancestor(
     vim.treesitter.get_node(),
-    { 'function_declaration', 'method_declaration', 'function_definition'}
+    { 'function_declaration', 'method_declaration', 'function_definition', 'type_declaration' }
   )
   if not node then
     return nil
