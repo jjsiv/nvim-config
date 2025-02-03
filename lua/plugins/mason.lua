@@ -51,8 +51,9 @@ return {
       'clangd',
       'yaml-language-server',
       'shellcheck',
-      'autopep8',
       'shfmt',
+      'yamllint',
+      'ruff',
     })
   end,
 }
