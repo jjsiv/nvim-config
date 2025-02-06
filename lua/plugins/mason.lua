@@ -54,6 +54,7 @@ return {
       'shfmt',
       'yamllint',
       'ruff',
+      'golangci-lint',
     })
   end,
 }

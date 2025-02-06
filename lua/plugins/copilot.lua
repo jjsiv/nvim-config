@@ -5,6 +5,7 @@ return {
       'zbirenbaum/copilot-cmp',
     },
     cmd = "Copilot",
+    enabled = false,
     event = "InsertEnter",
     config = function()
       require("copilot").setup({

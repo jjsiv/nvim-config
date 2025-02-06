@@ -8,7 +8,7 @@ return {
       yaml = { 'yamllint' },
     }
 
-    vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+    vim.api.nvim_create_autocmd({ "InsertLeave", "BufWritePost", "InsertEnter" }, {
       callback = function()
         lint.try_lint()
       end,

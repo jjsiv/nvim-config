@@ -14,7 +14,7 @@ if utils.is_executable('lua-language-server') then
     on_init = function(client)
       if client.workspace_folders then
         local path = client.workspace_folders[1].name
-        if vim.uv.fs_stat(path..'/.luarc.json') or vim.uv.fs_stat(path..'/.luarc.jsonc') then
+        if vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc') then
           return
         end
       end
@@ -92,6 +92,14 @@ if utils.is_executable('pyright-langserver') then
   lspconfig.pyright.setup({
     capabilities = capabilities,
     cmd = { 'pyright-langserver', '--stdio' },
+    filetypes = { 'python' },
+  })
+end
+
+if utils.is_executable('ruff') then
+  lspconfig.ruff.setup({
+    capabilities = capabilities,
+    cmd = { 'ruff', 'server' },
     filetypes = { 'python' },
   })
 end
