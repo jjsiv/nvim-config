@@ -7,6 +7,7 @@ return {
       sh = { 'shfmt' },
       yaml = { 'prettier' },
       json = { 'prettier' },
+      markdown = { 'prettier' },
     },
     format_on_save = {
       timeout_ms = 1000,
