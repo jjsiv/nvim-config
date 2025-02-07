@@ -9,7 +9,7 @@ return {
       json = { 'prettier' },
       markdown = { 'prettier' },
     },
-    format_on_save = {
+    format_after_save = {
       timeout_ms = 1000,
       lsp_format = 'fallback',
     }

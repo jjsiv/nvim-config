@@ -55,6 +55,7 @@ return {
       'yamllint',
       'ruff',
       'golangci-lint',
+      'goimports',
     })
   end,
 }
