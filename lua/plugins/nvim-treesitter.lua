@@ -1,4 +1,4 @@
-return { 
+return {
   "nvim-treesitter/nvim-treesitter",
   build = function()
     require("nvim-treesitter.install").update({ with_sync = true })()
@@ -24,6 +24,8 @@ return {
         "make",
         "dockerfile",
         "regex",
+        "jinja",
+        "query",
       },
       sync_install = false,
       highlight = { enable = true },
