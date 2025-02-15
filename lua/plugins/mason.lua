@@ -56,6 +56,7 @@ return {
       'ruff',
       'golangci-lint',
       'goimports',
+      'markdownlint',
     })
   end,
 }
