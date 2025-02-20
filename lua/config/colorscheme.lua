@@ -3,3 +3,5 @@ vim.api.nvim_cmd({
     args = { "catppuccin" }
   },
   {})
+
+vim.api.nvim_set_hl(0, 'LineNr', { bold = true })
