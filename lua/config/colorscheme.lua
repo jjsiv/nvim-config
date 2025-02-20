@@ -4,4 +4,4 @@ vim.api.nvim_cmd({
   },
   {})
 
-vim.api.nvim_set_hl(0, 'LineNr', { bold = true })
+vim.api.nvim_set_hl(0, 'LineNr', { fg = '#808080' })
