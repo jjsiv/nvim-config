@@ -32,8 +32,4 @@ return {
       indent = { enable = true },
     })
   end,
-  {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    after = 'nvim-treesitter',
-  }
 }
