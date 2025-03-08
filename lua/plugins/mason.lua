@@ -1,8 +1,8 @@
 return {
   "williamboman/mason.nvim",
   config = function()
-    require('mason').setup()
-    local registry = require('mason-registry')
+    require("mason").setup()
+    local registry = require("mason-registry")
 
     registry:on(
       "package:handle",
@@ -39,24 +39,25 @@ return {
     -- i.e. 'lua-language-server' instead of lua_ls
     registry.refresh()
     setup_packages({
-      'prettier',
-      'ansible-language-server',
-      'ansible-lint',
-      'terraform-ls',
-      'bash-language-server',
-      'lua-language-server',
-      'gopls',
-      'helm-ls',
-      'pyright',
-      'clangd',
-      'yaml-language-server',
-      'shellcheck',
-      'shfmt',
-      'yamllint',
-      'ruff',
-      'golangci-lint',
-      'goimports',
-      'markdownlint',
+      "prettier",
+      "ansible-language-server",
+      "ansible-lint",
+      "terraform-ls",
+      "bash-language-server",
+      "lua-language-server",
+      "gopls",
+      "helm-ls",
+      "pyright",
+      "clangd",
+      "yaml-language-server",
+      "shellcheck",
+      "shfmt",
+      "yamllint",
+      "ruff",
+      "golangci-lint",
+      "goimports",
+      "markdownlint",
+      "stylua",
     })
   end,
 }
