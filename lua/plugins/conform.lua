@@ -3,6 +3,7 @@ return {
   opts = {
     formatters_by_ft = {
       python = { 'ruff_format' },
+      lua = { 'stylua' },
       go = { 'gofmt', 'goimports' },
       sh = { 'shfmt' },
       yaml = { 'prettier' },
