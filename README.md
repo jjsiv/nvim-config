@@ -36,7 +36,6 @@ Requires Neovim 0.10.0+
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [glow.nvim](https://github.com/ellisonleao/glow.nvim)
 - [nvim-surround](https://github.com/kylechui/nvim-surround)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
