@@ -1,9 +1,6 @@
 return {
   {
-    'zbirenbaum/copilot.lua',
-    dependencies = {
-      'zbirenbaum/copilot-cmp',
-    },
+    "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     enabled = true,
     event = "InsertEnter",
@@ -16,16 +13,14 @@ return {
           hide_during_completion = true,
         },
       })
-
-      require("copilot_cmp").setup()
     end,
   },
   {
-    'CopilotC-Nvim/CopilotChat.nvim',
+    "CopilotC-Nvim/CopilotChat.nvim",
     build = "make tiktoken",
     enabled = true,
     opts = {
-      model = 'claude-3.5-sonnet'
-    }
+      model = "claude-3.5-sonnet",
+    },
   },
 }

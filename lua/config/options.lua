@@ -14,13 +14,17 @@ local opts = {
   scrolloff = 10,
   splitright = true,
   cursorline = true,
-  completeopt = { 'menu', 'menuone' , 'noselect', 'noinsert', 'popup' },
+  completeopt = { "menu", "menuone", "noselect", "noinsert", "popup" },
 }
 
 for opt, value in pairs(opts) do
-  if (type(value) ~= "table") then
+  if type(value) ~= "table" then
     vim.o[opt] = value
   else
     vim.opt[opt] = value
   end
 end
+
+vim.diagnostic.config({
+  virtual_text = true,
+})

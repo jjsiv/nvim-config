@@ -1,40 +1,53 @@
 return {
-  'hrsh7th/nvim-cmp',
-  lazy = false,
+  "saghen/blink.cmp",
   dependencies = {
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    { 'L3MON4D3/LuaSnip', version = "v2.*", build = 'make install_jsregexp' },
-    'saadparwaiz1/cmp_luasnip',
+    "rafamadriz/friendly-snippets",
+    { "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
   },
-  config = function()
-    local cmp = require('cmp')
-    local ls = require('luasnip')
-    cmp.setup({
-      experimental = {
-        ghost_text = true,
-      },
-      snippet = {
-        expand = function(args)
-          ls.lsp_expand(args.body)
-        end,
-      },
-      sources = cmp.config.sources({
-        { name = "copilot", priority = 2 },
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'buffer' },
-        { name = 'path' },
-      }),
-      mapping = {
-        ['<Tab>'] = cmp.mapping.confirm({ select = false }),
-        ["<C-n>"] = cmp.mapping.select_next_item(),
-        ["<C-p>"] = cmp.mapping.select_prev_item(),
-      },
-    })
+  version = "1.*",
 
-    require("luasnip.loaders.from_snipmate").lazy_load()
-  end,
+  ---@module 'blink.cmp'
+  opts = {
+    keymap = {
+      preset = "none",
+      ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+      ["<C-e>"] = { "hide", "fallback" },
+
+      ["<Tab>"] = { "accept", "fallback" },
+      ["<C-h>"] = { "snippet_forward" },
+      ["<Up>"] = { "select_prev", "fallback" },
+      ["<Down>"] = { "select_next", "fallback" },
+      ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
+      ["<C-n>"] = { "select_next", "fallback_to_mappings" },
+    },
+    appearance = {
+      nerd_font_variant = "mono",
+    },
+    completion = {
+      documentation = {
+        auto_show = true,
+      },
+      ghost_text = {
+        enabled = true,
+      },
+      menu = {
+        draw = {
+          align_to = "label",
+          columns = {
+            { "label", "label_description", gap = 1 },
+            { "kind_icon", gap = 1 },
+            { "kind" },
+          },
+        },
+      },
+    },
+    sources = {
+      default = { "lsp", "path", "snippets", "buffer" },
+    },
+    fuzzy = { implementation = "prefer_rust_with_warning" },
+    signature = {
+      enabled = true,
+    },
+  },
+  opts_extend = { "sources.default" },
 }

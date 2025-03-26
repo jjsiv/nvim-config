@@ -1,5 +1,5 @@
 return {
-  'Wansmer/treesj',
-  keys = { '<space>m', '<space>j', '<space>s' },
+  "Wansmer/treesj",
+  keys = { "<space>m", "<space>j", "<space>s" },
   opts = {},
 }
