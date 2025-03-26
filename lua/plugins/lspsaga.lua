@@ -1,6 +1,5 @@
 return {
   "nvimdev/lspsaga.nvim",
-  event = "LspAttach",
   config = function()
     local lspsaga = require("lspsaga")
 
@@ -58,7 +57,6 @@ return {
       ":Lspsaga peek_type_definition<CR>",
       { desc = "LSP type definitions" }
     )
-    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "LSP hover doc" })
     vim.keymap.set("n", "<C-k>", ":Lspsaga hover_doc ++keep<CR>", { desc = "LSP hover doc keep" })
   end,
 }

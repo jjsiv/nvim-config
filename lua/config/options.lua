@@ -26,5 +26,7 @@ for opt, value in pairs(opts) do
 end
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_lines = true,
 })
+
+vim.o.winborder = "rounded"
