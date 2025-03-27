@@ -46,6 +46,7 @@ Requires Neovim 0.11.0+
 - [nvimdev/lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)
 - [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
 - [Saghen/blink.cmp](https://github.com/Saghen/blink.cmp)
+- [fang2hou/blink-copilot](https://github.com/fang2hou/blink-copilot)
 
 ## LSP
 
