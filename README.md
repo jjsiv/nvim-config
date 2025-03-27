@@ -1,6 +1,6 @@
 # nvim-config
 
-Requires Neovim 0.10.0+
+Requires Neovim 0.11.0+
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Requires Neovim 0.10.0+
 - npm
 - go (optional, required for some installations via Mason)
 
-1. [Download and install Neovim 0.10.4](https://github.com/neovim/neovim/releases/tag/v0.10.4)
+1. [Download and install Neovim 0.11.0](https://github.com/neovim/neovim/releases/tag/v0.11.0)
 2. Untar and move directory to desired directory. Update PATH if necessary
 3. Create local config directory ~/.config/nvim  
    `mkdir -p ~/.config/nvim`
@@ -52,4 +52,4 @@ Requires Neovim 0.10.0+
 
 LSPs/linters/formatters/etc. are installed via Mason in `lua/plugins/mason.lua`.
 
-**lua/config/lsp.lua** defines config for LSPs. The config will be only activated if the LSP is installed and executable.
+LSPs are configured in `lsp/` and enabled in `init.lua`.
