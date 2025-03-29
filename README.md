@@ -47,6 +47,7 @@ Requires Neovim 0.11.0+
 - [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
 - [Saghen/blink.cmp](https://github.com/Saghen/blink.cmp)
 - [fang2hou/blink-copilot](https://github.com/fang2hou/blink-copilot)
+- [MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 
 ## LSP
 

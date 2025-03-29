@@ -4,7 +4,7 @@ require("config.colorscheme")
 require("config.keymaps")
 
 vim.lsp.enable({
-  "yaml-language-server",
+  -- "yaml-language-server",
   "pyright",
   "ruff",
   "gopls",

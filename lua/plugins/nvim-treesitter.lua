@@ -5,7 +5,7 @@ return {
   end,
   config = function()
     local configs = require("nvim-treesitter.configs")
-    vim.treesitter.language.register('yaml', 'tekton')
+    vim.treesitter.language.register("yaml", "tekton")
     configs.setup({
       ensure_installed = {
         "bash",

@@ -47,6 +47,7 @@ return {
       providers = {
         copilot = {
           name = "copilot",
+          async = true,
           module = "blink-copilot",
         },
       },
