@@ -47,7 +47,6 @@ return {
       "lua-language-server",
       "gopls",
       "helm-ls",
-      "pyright",
       "clangd",
       "yaml-language-server",
       "shellcheck",
@@ -55,9 +54,11 @@ return {
       "yamllint",
       "ruff",
       "golangci-lint",
+      "golangci-lint-langserver",
       "goimports",
       "markdownlint",
       "stylua",
+      "basedpyright",
     })
   end,
 }

@@ -5,7 +5,7 @@ require("config.keymaps")
 
 vim.lsp.enable({
   -- "yaml-language-server",
-  "pyright",
+  "basedpyright",
   "ruff",
   "gopls",
   "lua-language-server",
