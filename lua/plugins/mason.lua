@@ -59,6 +59,7 @@ return {
       "markdownlint",
       "stylua",
       "basedpyright",
+      "copilot-language-server",
     })
   end,
 }
