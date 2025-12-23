@@ -60,6 +60,8 @@ return {
       "stylua",
       "basedpyright",
       "copilot-language-server",
+      "tflint",
+      "tfsec",
     })
   end,
 }

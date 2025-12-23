@@ -18,9 +18,9 @@ return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     build = "make tiktoken",
-    enabled = false,
+    enabled = true,
     opts = {
-      model = "claude-3.5-sonnet",
+      model = "claude-4.5-sonnet",
     },
   },
 }
