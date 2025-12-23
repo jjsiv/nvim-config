@@ -4,6 +4,7 @@ Requires Neovim 0.11.0+
 
 ## Requirements
 
+- tree-sitter-cli
 - C compiler (gcc/clang)
 - Lua
 - git
