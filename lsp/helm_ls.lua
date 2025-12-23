@@ -4,7 +4,7 @@ return {
   settings = {
     ["helm-ls"] = {
       yamlls = {
-        enabled = false,
+        enabled = true,
       },
     },
   },

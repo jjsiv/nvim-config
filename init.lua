@@ -10,6 +10,7 @@ vim.lsp.enable({
   "gopls",
   "lua-language-server",
   "ansible-language-server",
+  "yaml-language-server",
   "bash-language-server",
   "terraform-ls",
   "helm_ls",
