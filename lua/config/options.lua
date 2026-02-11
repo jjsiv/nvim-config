@@ -15,6 +15,7 @@ local opts = {
   splitright = true,
   cursorline = true,
   completeopt = { "menu", "menuone", "noselect", "noinsert", "popup" },
+  clipboard = "unnamedplus",
 }
 
 for opt, value in pairs(opts) do
