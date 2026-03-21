@@ -20,7 +20,7 @@ return {
     build = "make tiktoken",
     enabled = true,
     opts = {
-      model = "claude-sonnet-4.5",
+      model = "claude-opus-4.6",
     },
   },
 }
