@@ -16,4 +16,6 @@ vim.lsp.enable({
   "helm_ls",
   "clangd",
   "copilot",
+  "vtsls",
+  "eslint",
 })

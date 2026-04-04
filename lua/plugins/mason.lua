@@ -62,6 +62,8 @@ return {
       "copilot-language-server",
       "tflint",
       "tfsec",
+      "vtsls",
+      "eslint-lsp",
     })
   end,
 }

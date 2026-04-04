@@ -7,6 +7,7 @@ return {
   config = function()
     local md = require("render-markdown")
     md.setup({
+      file_types = { "markdown", "copilot-chat" },
       completions = {
         blink = {
           enabled = true,

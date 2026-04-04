@@ -7,7 +7,7 @@ return {
     -- keymaps for telescope
     -- add some LSP pickers later
     vim.keymap.set("n", "<leader>ff", function()
-      builtin.find_files({ no_ignore = true })
+      builtin.find_files({ no_ignore = false })
     end, { desc = "Telescope find files" })
     vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
     vim.keymap.set("n", "<leader>fc", function()
