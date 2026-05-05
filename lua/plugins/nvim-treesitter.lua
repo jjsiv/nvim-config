@@ -96,6 +96,9 @@ return {
 
     local ignore_filetypes = {
       "cmd",
+      "msg",
+      "dialog",
+      "pager",
       "checkhealth",
       "lazy",
       "mason",
@@ -103,7 +106,7 @@ return {
       "snacks_notif",
       "snacks_win",
       "TelescopePrompt",
-      "TelescopeRresults",
+      "TelescopeResults",
       "blink-cmp-menu",
       "blink-cmp-documentation",
     }
