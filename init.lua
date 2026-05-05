@@ -18,4 +18,5 @@ vim.lsp.enable({
   "copilot",
   "vtsls",
   "eslint",
+  "gitlab-ci-ls",
 })

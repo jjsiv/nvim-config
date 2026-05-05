@@ -64,6 +64,7 @@ return {
       "tfsec",
       "vtsls",
       "eslint-lsp",
+      "gitlab-ci-ls",
     })
   end,
 }
