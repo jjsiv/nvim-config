@@ -1,6 +1,6 @@
 # nvim-config
 
-Requires Neovim 0.11.0+
+Requires Neovim 0.12.0+
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Requires Neovim 0.11.0+
 - npm
 - go (optional, required for some installations via Mason)
 
-1. [Download and install Neovim 0.11.0](https://github.com/neovim/neovim/releases/tag/v0.11.0)
+1. [Download and install Neovim 0.12.0](https://github.com/neovim/neovim/releases/tag/v0.12.2)
 2. Untar and move directory to desired directory. Update PATH if necessary
 3. Create local config directory ~/.config/nvim  
    `mkdir -p ~/.config/nvim`

@@ -95,12 +95,17 @@ return {
     local group = vim.api.nvim_create_augroup("TreesitterSetup", { clear = true })
 
     local ignore_filetypes = {
+      "cmd",
       "checkhealth",
       "lazy",
       "mason",
       "snacks_dashboard",
       "snacks_notif",
       "snacks_win",
+      "TelescopePrompt",
+      "TelescopeRresults",
+      "blink-cmp-menu",
+      "blink-cmp-documentation",
     }
 
     -- Auto-install parsers and enable highlighting on FileType
@@ -132,33 +137,4 @@ return {
       end,
     })
   end,
-  -- config = function()
-  --   local configs = require("nvim-treesitter.configs")
-  --   vim.treesitter.language.register("yaml", "tekton")
-  --   configs.setup({
-  --     ensure_installed = {
-  --       "bash",
-  --       "c",
-  --       "lua",
-  --       "vim",
-  --       "vimdoc",
-  --       "javascript",
-  --       "html",
-  --       "python",
-  --       "go",
-  --       "yaml",
-  --       "json",
-  --       "markdown",
-  --       "helm",
-  --       "make",
-  --       "dockerfile",
-  --       "regex",
-  --       "jinja",
-  --       "query",
-  --     },
-  --     sync_install = false,
-  --     highlight = { enable = true },
-  --     indent = { enable = true },
-  --   })
-  -- end,
 }
