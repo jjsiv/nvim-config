@@ -102,6 +102,8 @@ return {
       "checkhealth",
       "lazy",
       "mason",
+      "oil",
+      "oil-preview",
       "snacks_dashboard",
       "snacks_notif",
       "snacks_win",
@@ -109,6 +111,7 @@ return {
       "TelescopeResults",
       "blink-cmp-menu",
       "blink-cmp-documentation",
+      "lazy_backdrop",
     }
 
     -- Auto-install parsers and enable highlighting on FileType
