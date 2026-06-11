@@ -112,6 +112,7 @@ return {
       "blink-cmp-menu",
       "blink-cmp-documentation",
       "lazy_backdrop",
+      "sidekick_terminal",
     }
 
     -- Auto-install parsers and enable highlighting on FileType

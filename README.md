@@ -49,6 +49,7 @@ Requires Neovim 0.12.0+
 - [Saghen/blink.cmp](https://github.com/Saghen/blink.cmp)
 - [fang2hou/blink-copilot](https://github.com/fang2hou/blink-copilot)
 - [MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- [folke/sidekick.nvim](https://github.com/folke/sidekick.nvim)
 
 ## LSP
 
