@@ -68,6 +68,9 @@ if plugin_loaded("CopilotChat.nvim") then
   vim.keymap.set("n", "co", "<cmd>CopilotChatToggle<CR>")
 end
 
+-- Preview Markdown
+vim.keymap.set("n", "<leader>mm", "<cmd>:!firefox %:p<CR>")
+
 -- diffview shortnames
 if plugin_loaded("diffview.nvim") then
   vim.keymap.set("ca", "Dvo", "DiffviewOpen")
