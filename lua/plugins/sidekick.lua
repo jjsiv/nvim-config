@@ -12,6 +12,9 @@ return {
           backend = "tmux",
           create = "terminal",
         },
+        prompts = {
+          explain_in_depth = "Explain this for someone without experience on the subject. {this}",
+        },
       },
     })
   end,
@@ -27,9 +30,9 @@ return {
     {
       "<leader>cc",
       function()
-        require("sidekick.cli").toggle({ name = "claude", focus = false })
+        require("sidekick.cli").toggle({ name = "copilot", focus = true })
       end,
-      desc = "Toggle Claude Code",
+      desc = "Toggle Copilot",
     },
     {
       "<leader>cd",
