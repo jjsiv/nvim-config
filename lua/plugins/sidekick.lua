@@ -30,7 +30,7 @@ return {
         require("sidekick.cli").focus()
       end,
       desc = "Sidekick Focus",
-      mode = { "n", "t", "x" },
+      mode = { "n", "x" },
     },
     {
       "<leader>cc",
