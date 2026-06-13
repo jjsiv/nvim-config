@@ -15,6 +15,11 @@ return {
         prompts = {
           explain_in_depth = "Explain this for someone without experience on the subject. {this}",
         },
+        tools = {
+          copilot = {
+            cmd = { "copilot", "--banner", "--allow-all-tools" },
+          },
+        },
       },
     })
   end,
@@ -25,7 +30,7 @@ return {
         require("sidekick.cli").focus()
       end,
       desc = "Sidekick Focus",
-      mode = { "n", "t", "i", "x" },
+      mode = { "n", "t", "x" },
     },
     {
       "<leader>cc",
@@ -40,6 +45,13 @@ return {
         require("sidekick.cli").hide()
       end,
       desc = "Hide CLI",
+    },
+    {
+      "<leader>cs",
+      function()
+        require("sidekick.cli").show()
+      end,
+      desc = "Show CLI",
     },
     {
       "<leader>at",
