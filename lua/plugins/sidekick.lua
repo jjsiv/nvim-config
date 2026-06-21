@@ -20,6 +20,11 @@ return {
             cmd = { "copilot", "--banner", "--allow-all-tools" },
           },
         },
+        win = {
+          keys = {
+            prompt = { "<c-s>", "prompt", mode = "t", desc = "insert prompt or context" },
+          },
+        },
       },
     })
   end,
@@ -35,9 +40,9 @@ return {
     {
       "<leader>cc",
       function()
-        require("sidekick.cli").toggle({ name = "copilot", focus = true })
+        require("sidekick.cli").toggle({ name = "claude", focus = true })
       end,
-      desc = "Toggle Copilot",
+      desc = "Toggle Claude",
     },
     {
       "<leader>cd",

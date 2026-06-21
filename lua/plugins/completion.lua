@@ -43,14 +43,14 @@ return {
       },
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "copilot" },
-      providers = {
-        copilot = {
-          name = "copilot",
-          async = true,
-          module = "blink-copilot",
-        },
-      },
+      default = { "lsp", "path", "snippets", "buffer" },
+      -- providers = {
+      --   copilot = {
+      --     name = "copilot",
+      --     async = true,
+      --     module = "blink-copilot",
+      --   },
+      -- },
     },
     fuzzy = { implementation = "prefer_rust_with_warning" },
     signature = {
