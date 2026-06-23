@@ -15,8 +15,9 @@ vim.lsp.enable({
   "terraform-ls",
   "helm_ls",
   "clangd",
-  "copilot",
+  -- "copilot",
   "vtsls",
   "eslint",
   "gitlab-ci-ls",
+  "cssls",
 })

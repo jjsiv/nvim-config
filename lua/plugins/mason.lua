@@ -65,6 +65,7 @@ return {
       "vtsls",
       "eslint-lsp",
       "gitlab-ci-ls",
+      "css-lsp",
     })
   end,
 }
