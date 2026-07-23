@@ -4,7 +4,7 @@ require("config.colorscheme")
 require("config.keymaps")
 
 vim.lsp.enable({
-  -- "yaml-language-server",
+  "yaml-language-server",
   "basedpyright",
   "ruff",
   "gopls",
@@ -15,7 +15,6 @@ vim.lsp.enable({
   "terraform-ls",
   "helm_ls",
   "clangd",
-  -- "copilot",
   "vtsls",
   "eslint",
   "gitlab-ci-ls",

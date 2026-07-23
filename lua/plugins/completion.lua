@@ -3,7 +3,6 @@ return {
   dependencies = {
     "rafamadriz/friendly-snippets",
     { "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
-    "fang2hou/blink-copilot",
   },
   version = "1.*",
 
@@ -44,13 +43,6 @@ return {
     },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
-      -- providers = {
-      --   copilot = {
-      --     name = "copilot",
-      --     async = true,
-      --     module = "blink-copilot",
-      --   },
-      -- },
     },
     fuzzy = { implementation = "prefer_rust_with_warning" },
     signature = {

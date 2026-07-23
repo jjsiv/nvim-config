@@ -15,11 +15,6 @@ return {
         prompts = {
           explain_in_depth = "Explain this for someone without experience on the subject. {this}",
         },
-        tools = {
-          copilot = {
-            cmd = { "copilot", "--banner", "--allow-all-tools" },
-          },
-        },
         win = {
           keys = {
             prompt = { "<c-s>", "prompt", mode = "t", desc = "insert prompt or context" },

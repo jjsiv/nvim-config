@@ -11,14 +11,11 @@ end
 
 -- next buffer ctrl+n
 vim.keymap.set("n", "<C-n>", function()
-  if vim.fn.bufname() ~= "copilot-chat" then
-    vim.cmd("bnext")
-  end
+  vim.cmd("bnext")
 end, {})
+
 vim.keymap.set("n", "<C-p>", function()
-  if vim.fn.bufname() ~= "copilot-chat" then
-    vim.cmd("bprev")
-  end
+  vim.cmd("bprev")
 end, {})
 
 vim.keymap.set("i", "<C-h>", function()
@@ -61,12 +58,6 @@ vim.keymap.set("n", "ge", function()
   local row, col = node:end_()
   vim.api.nvim_win_set_cursor(0, { row + 1, col })
 end, { desc = "Jump to function end" })
-
--- CopilotChat
-if plugin_loaded("CopilotChat.nvim") then
-  vim.keymap.set("ca", "Chat", "CopilotChatOpen")
-  vim.keymap.set("n", "co", "<cmd>CopilotChatToggle<CR>")
-end
 
 -- Preview Markdown
 vim.keymap.set("n", "<leader>md", "<cmd>:!firefox %:p<CR>")

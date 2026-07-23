@@ -38,8 +38,6 @@ Requires Neovim 0.12.0+
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
 - [L3M0N4D3/LuaSnip](https://github.com/L3M0N4D3/LuaSnip)
-- [zbirenbaum/copilot.lua](https://github.com/zbirenbaum/copilot.lua)
-- [CopilotC-Nvim/CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
 - [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
 - [jinh0/eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim)
@@ -47,7 +45,6 @@ Requires Neovim 0.12.0+
 - [nvimdev/lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)
 - [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
 - [Saghen/blink.cmp](https://github.com/Saghen/blink.cmp)
-- [fang2hou/blink-copilot](https://github.com/fang2hou/blink-copilot)
 - [MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - [folke/sidekick.nvim](https://github.com/folke/sidekick.nvim)
 

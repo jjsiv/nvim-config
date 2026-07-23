@@ -59,7 +59,6 @@ return {
       "markdownlint",
       "stylua",
       "basedpyright",
-      "copilot-language-server",
       "tflint",
       "tfsec",
       "vtsls",
